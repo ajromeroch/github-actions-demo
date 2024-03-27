@@ -10,8 +10,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,7 +37,7 @@ jobs:
       run: npm install
 
     - name: Run ESLint
-      run: npm run lint  # Make sure you have a "lint" script in your package.json
+      run: npm run lint  # Needs to be present in package.json
 
     - name: Run unit tests
-      run: npm test  # Make sure you have a "test" script in your package.json
+      run: npm test  # Needs to be present in package.json
